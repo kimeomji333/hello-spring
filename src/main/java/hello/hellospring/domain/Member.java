@@ -1,8 +1,13 @@
 package hello.hellospring.domain;
 
+import jakarta.persistence.*;
+
+@Entity // JPA 관리하는 Entity
 public class Member {
 
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     private String name;
 
     public Long getId() {
